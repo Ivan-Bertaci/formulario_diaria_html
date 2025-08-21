@@ -41,23 +41,20 @@
         </div>
 
         <!-- Início do formulário -->
-        <form action="https://script.google.com/macros/s/AKfycbwazpcF94d-Wbepo4luiDON1zS9HtDNQXbAUvITRHSF_ch5Q8THzOFgJ9F91IwEoOcqeA/exec" method="POST" class="p-6 sm:p-8 md:p-10 space-y-6">
+        <form id="daily-form" action="https://script.google.com/macros/s/AKfycbwazpcF94d-Wbepo4luiDON1zS9HtDNQXbAUvITRHSF_ch5Q8THzOFgJ9F91IwEoOcqeA/exec" class="p-6 sm:p-8 md:p-10 space-y-6">
             
             <!-- Seção: Dados Pessoais -->
             <div>
                 <h2 class="text-lg font-semibold text-[#003366] border-b pb-2 mb-4">1. Dados Pessoais e Funcionais</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Campo Nome Completo -->
                     <div>
                         <label for="nome-completo" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
                         <input type="text" id="nome-completo" name="Nome Completo" placeholder="Digite seu nome completo" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
                     </div>
-                    <!-- Campo CPF -->
                     <div>
                         <label for="cpf" class="block text-sm font-medium text-gray-700 mb-1">CPF</label>
                         <input type="text" id="cpf" name="CPF" placeholder="000.000.000-00" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
                     </div>
-                    <!-- Campo Cargo -->
                     <div>
                         <label for="cargo" class="block text-sm font-medium text-gray-700 mb-1">Nome do Cargo</label>
                         <input type="text" id="cargo" name="Cargo" placeholder="Ex: Analista Administrativo" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
@@ -69,17 +66,14 @@
             <div>
                 <h2 class="text-lg font-semibold text-[#003366] border-b pb-2 mb-4">2. Dados Bancários</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Campo Banco -->
                     <div>
                         <label for="banco" class="block text-sm font-medium text-gray-700 mb-1">Banco</label>
                         <input type="text" id="banco" name="Banco" value="Banco do Brasil" readonly required class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-500 cursor-not-allowed">
                     </div>
-                    <!-- Campo Agência -->
                     <div>
                         <label for="agencia" class="block text-sm font-medium text-gray-700 mb-1">Agência</label>
                         <input type="text" id="agencia" name="Agência" placeholder="0000" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
                     </div>
-                    <!-- Campo Conta Corrente -->
                     <div>
                         <label for="conta-corrente" class="block text-sm font-medium text-gray-700 mb-1">Conta Corrente</label>
                         <input type="text" id="conta-corrente" name="Conta Corrente" placeholder="00000-0" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
@@ -91,51 +85,21 @@
             <div>
                 <h2 class="text-lg font-semibold text-[#003366] border-b pb-2 mb-4">3. Detalhes da Viagem</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Campo Motivo da Viagem -->
                     <div class="md:col-span-2">
                         <label for="motivo-viagem" class="block text-sm font-medium text-gray-700 mb-1">Motivo da Viagem</label>
                         <textarea id="motivo-viagem" name="Motivo da Viagem" rows="3" placeholder="Descreva o propósito da viagem (evento, reunião, etc.)" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out"></textarea>
                     </div>
-                    <!-- Campo Estado de Destino -->
                     <div>
                         <label for="estado-destino" class="block text-sm font-medium text-gray-700 mb-1">Estado de Destino</label>
                         <select id="estado-destino" name="Estado de Destino" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 bg-white transition duration-150 ease-in-out">
                             <option value="" disabled selected>Selecione um estado</option>
-                            <option value="Acre">Acre</option>
-                            <option value="Alagoas">Alagoas</option>
-                            <option value="Amapá">Amapá</option>
-                            <option value="Amazonas">Amazonas</option>
-                            <option value="Bahia">Bahia</option>
-                            <option value="Ceará">Ceará</option>
-                            <option value="Distrito Federal">Distrito Federal</option>
-                            <option value="Espírito Santo">Espírito Santo</option>
-                            <option value="Goiás">Goiás</option>
-                            <option value="Maranhão">Maranhão</option>
-                            <option value="Mato Grosso">Mato Grosso</option>
-                            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-                            <option value="Minas Gerais">Minas Gerais</option>
-                            <option value="Pará">Pará</option>
-                            <option value="Paraíba">Paraíba</option>
-                            <option value="Paraná">Paraná</option>
-                            <option value="Pernambuco">Pernambuco</option>
-                            <option value="Piauí">Piauí</option>
-                            <option value="Rio de Janeiro">Rio de Janeiro</option>
-                            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-                            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-                            <option value="Rondônia">Rondônia</option>
-                            <option value="Roraima">Roraima</option>
-                            <option value="Santa Catarina">Santa Catarina</option>
-                            <option value="São Paulo">São Paulo</option>
-                            <option value="Sergipe">Sergipe</option>
-                            <option value="Tocantins">Tocantins</option>
+                            <option value="Acre">Acre</option><option value="Alagoas">Alagoas</option><option value="Amapá">Amapá</option><option value="Amazonas">Amazonas</option><option value="Bahia">Bahia</option><option value="Ceará">Ceará</option><option value="Distrito Federal">Distrito Federal</option><option value="Espírito Santo">Espírito Santo</option><option value="Goiás">Goiás</option><option value="Maranhão">Maranhão</option><option value="Mato Grosso">Mato Grosso</option><option value="Mato Grosso do Sul">Mato Grosso do Sul</option><option value="Minas Gerais">Minas Gerais</option><option value="Pará">Pará</option><option value="Paraíba">Paraíba</option><option value="Paraná">Paraná</option><option value="Pernambuco">Pernambuco</option><option value="Piauí">Piauí</option><option value="Rio de Janeiro">Rio de Janeiro</option><option value="Rio Grande do Norte">Rio Grande do Norte</option><option value="Rio Grande do Sul">Rio Grande do Sul</option><option value="Rondônia">Rondônia</option><option value="Roraima">Roraima</option><option value="Santa Catarina">Santa Catarina</option><option value="São Paulo">São Paulo</option><option value="Sergipe">Sergipe</option><option value="Tocantins">Tocantins</option>
                         </select>
                     </div>
-                    <!-- Campo Cidade de Destino -->
                     <div>
                         <label for="cidade-destino" class="block text-sm font-medium text-gray-700 mb-1">Cidade de Destino</label>
                         <input type="text" id="cidade-destino" name="Cidade de Destino" placeholder="Digite o nome do município" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
                     </div>
-                    <!-- Campo Período do Evento -->
                     <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Período do Evento</label>
                         <div class="flex items-center space-x-2">
@@ -151,36 +115,27 @@
             <div>
                 <h2 class="text-lg font-semibold text-[#003366] border-b pb-2 mb-4">4. Roteiro e Transporte</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <!-- Campo Saída da Sede -->
                     <div>
                         <label for="saida-sede" class="block text-sm font-medium text-gray-700 mb-1">Saída da Sede</label>
                         <input type="datetime-local" id="saida-sede" name="Saída da Sede" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
                     </div>
-                    <!-- Campo Chegada no Destino -->
                     <div>
                         <label for="chegada-destino" class="block text-sm font-medium text-gray-700 mb-1">Chegada na Cidade de Destino</label>
                         <input type="datetime-local" id="chegada-destino" name="Chegada no Destino" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
                     </div>
-                    <!-- Campo Saída do Destino -->
                     <div>
                         <label for="saida-destino" class="block text-sm font-medium text-gray-700 mb-1">Saída da Cidade de Destino</label>
                         <input type="datetime-local" id="saida-destino" name="Saída do Destino" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
                     </div>
-                    <!-- Campo Chegada na Sede -->
                     <div>
                         <label for="chegada-sede" class="block text-sm font-medium text-gray-700 mb-1">Chegada na Sede</label>
                         <input type="datetime-local" id="chegada-sede" name="Chegada na Sede" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out">
                     </div>
-                     <!-- Campo Meio de Transporte -->
                     <div class="sm:col-span-2">
                         <label for="transporte" class="block text-sm font-medium text-gray-700 mb-1">Meio de Transporte</label>
                         <select id="transporte" name="Meio de Transporte" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 bg-white transition duration-150 ease-in-out">
                             <option value="" disabled selected>Selecione uma opção</option>
-                            <option value="veiculo-oficial">Veículo Oficial</option>
-                            <option value="veiculo-proprio">Veículo Próprio</option>
-                            <option value="aereo">Transporte Aéreo</option>
-                            <option value="terrestre-onibus">Transporte Terrestre - Ônibus</option>
-                            <option value="outro">Outro</option>
+                            <option value="veiculo-oficial">Veículo Oficial</option><option value="veiculo-proprio">Veículo Próprio</option><option value="aereo">Transporte Aéreo</option><option value="terrestre-onibus">Transporte Terrestre - Ônibus</option><option value="outro">Outro</option>
                         </select>
                     </div>
                 </div>
@@ -192,13 +147,7 @@
                 <div class="grid grid-cols-1 gap-6">
                     <div>
                         <label for="convocacao-diaria" class="block text-sm font-medium text-gray-700 mb-1">Convocação da Diária</label>
-                        <input type="file" id="convocacao-diaria" name="Arquivo Anexado" class="block w-full text-sm text-gray-500
-                          file:mr-4 file:py-2 file:px-4
-                          file:rounded-lg file:border-0
-                          file:text-sm file:font-semibold
-                          file:bg-blue-100 file:text-[#003366]
-                          hover:file:bg-blue-200 transition duration-150 ease-in-out
-                        "/>
+                        <input type="file" id="convocacao-diaria" name="Arquivo Anexado" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-100 file:text-[#003366] hover:file:bg-blue-200 transition duration-150 ease-in-out"/>
                     </div>
                 </div>
             </div>
@@ -209,11 +158,121 @@
                     Enviar Solicitação
                 </button>
             </div>
-
         </form>
     </div>
 
-    <!-- O bloco de script foi removido pois não é mais necessário -->
+    <!-- Modal para feedback de sucesso/erro -->
+    <div id="feedback-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+      <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+          <div id="modal-icon" class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+            <!-- Ícone será inserido via JS -->
+          </div>
+          <h3 id="modal-title" class="text-lg leading-6 font-medium text-gray-900">Sucesso!</h3>
+          <div class="mt-2 px-7 py-3">
+            <p id="modal-message" class="text-sm text-gray-500">Sua solicitação foi enviada.</p>
+          </div>
+          <div class="items-center px-4 py-3">
+            <button id="close-modal-btn" class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300">
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <script>
+      const form = document.getElementById('daily-form');
+      const scriptURL = form.action;
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        const fileInput = document.getElementById('convocacao-diaria');
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Enviando...';
+
+        const handleSubmission = (fileData = null) => {
+          const formData = new FormData(form);
+          const data = {};
+          for (let [key, value] of formData.entries()) {
+            if (value instanceof File && value.size > 0) continue;
+            data[key] = value;
+          }
+
+          if (fileData) {
+            data.fileData = fileData;
+            data.fileName = file.name;
+            data.fileMimeType = file.type;
+          }
+          
+          fetch(scriptURL, { 
+            method: 'POST', 
+            body: JSON.stringify(data),
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          })
+          .then(response => response.json())
+          .then(result => {
+            if (result.status === 'SUCCESS') {
+              showModal('success', 'Enviado com Sucesso!', 'Sua solicitação foi registrada.');
+              form.reset();
+            } else {
+              showModal('error', 'Erro!', 'Ocorreu um problema ao enviar sua solicitação. Tente novamente.');
+              console.error('Error!', result.error);
+            }
+          })
+          .catch(error => {
+            showModal('error', 'Erro de Rede!', 'Não foi possível conectar ao servidor. Verifique sua conexão.');
+            console.error('Error!', error.message);
+          })
+          .finally(() => {
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Enviar Solicitação';
+          });
+        }
+
+        if (file) {
+          reader.onload = event => handleSubmission(event.target.result);
+          reader.onerror = error => {
+            showModal('error', 'Erro!', 'Não foi possível ler o arquivo anexado.');
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Enviar Solicitação';
+          };
+          reader.readAsDataURL(file);
+        } else {
+          handleSubmission();
+        }
+      });
+
+      const modal = document.getElementById('feedback-modal');
+      const closeModalBtn = document.getElementById('close-modal-btn');
+      const modalIcon = document.getElementById('modal-icon');
+      const modalTitle = document.getElementById('modal-title');
+      const modalMessage = document.getElementById('modal-message');
+      const successIcon = `<svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`;
+      const errorIcon = `<svg class="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+
+      function showModal(type, title, message) {
+        modalTitle.textContent = title;
+        modalMessage.textContent = message;
+        if (type === 'success') {
+          modalIcon.innerHTML = successIcon;
+          modalIcon.className = 'mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100';
+          closeModalBtn.className = 'px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-green-600';
+        } else {
+          modalIcon.innerHTML = errorIcon;
+          modalIcon.className = 'mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100';
+          closeModalBtn.className = 'px-4 py-2 bg-red-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-red-600';
+        }
+        modal.classList.remove('hidden');
+      }
+
+      closeModalBtn.addEventListener('click', () => modal.classList.add('hidden'));
+      window.addEventListener('click', (event) => { if (event.target == modal) { modal.classList.add('hidden'); } });
+    </script>
 </body>
 </html>
